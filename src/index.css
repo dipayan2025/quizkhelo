@@ -1,0 +1,48 @@
+*{
+  margin:0;
+  padding: 0;
+}
+body{
+  height: 150vh;
+  background-image:linear-gradient(#D8C7FF,#19006C);
+  font-family: 'poppins';
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display:flex;
+  
+
+  
+}
+/* index.css */
+
+
+body.dark {
+  background-color: #121212;
+  color: white;
+}
+
+.bg-blue-600 {
+  background-color: #1d4ed8;
+}
+
+.bg-gray-900 {
+  background-color: #1a202c;
+}
+
+.text-white {
+  color: white;
+}
+
+.dark .bg-blue-600 {
+  background-color: #2563eb;
+}
+
+.dark .text-white {
+  color: black;
+}
+
+.dark .hover\:underline:hover {
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
