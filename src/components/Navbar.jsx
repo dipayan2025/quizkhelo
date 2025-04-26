@@ -1,17 +1,22 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-
-  // Inline styles for the navbar and components
   const navbarStyle = {
     backgroundColor: '#2c3e50',
     color: 'white',
-    padding: '15px 30px',
+    padding: '1rem 2rem',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    position: 'sticky',
+    top: '0',
+    zIndex: '10',
+    width: '100%',
+    boxSizing: 'border-box',
+    flexWrap: 'wrap',
   };
 
   const leftSectionStyle = {
@@ -19,28 +24,56 @@ function Navbar() {
     fontWeight: 'bold',
   };
 
+  const hamburgerStyle = {
+    fontSize: '1.8rem',
+    cursor: 'pointer',
+    display: 'none',
+  };
+
   const rightSectionStyle = {
+    display: menuOpen ? 'flex' : 'none',
+    flexDirection: 'column',
+    gap: '10px',
+    alignItems: 'center',
+    width: '100%',
+    marginTop: '1rem',
+  };
+
+  const rightSectionDesktopStyle = {
     display: 'flex',
     alignItems: 'center',
+    gap: '15px',
   };
 
   const linkStyle = {
     color: 'white',
-    margin: '0 15px',
     textDecoration: 'none',
     fontWeight: 'bold',
+    fontSize: '1.1rem',
   };
 
   const linkHoverStyle = {
     textDecoration: 'underline',
   };
 
- 
+  const isMobile = window.innerWidth <= 768;
 
   return (
     <nav style={navbarStyle}>
       <div style={leftSectionStyle}>QuizMaster</div>
-      <div style={rightSectionStyle}>
+
+      {/* Hamburger icon */}
+      {isMobile && (
+        <div
+          style={{ ...hamburgerStyle, display: 'block' }}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? '✖' : '☰'}
+        </div>
+      )}
+
+      {/* Navigation Links */}
+      <div style={isMobile ? rightSectionStyle : rightSectionDesktopStyle}>
         <Link
           to="/"
           style={linkStyle}
@@ -73,7 +106,6 @@ function Navbar() {
         >
           Contact
         </Link>
-        
       </div>
     </nav>
   );

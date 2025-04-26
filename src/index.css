@@ -1,48 +1,25 @@
-*{
-  margin:0;
+* {
+  margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-body{
+
+body {
   height: 150vh;
-  background-image:linear-gradient(#D8C7FF,#19006C);
-  font-family: 'poppins';
+  background-image: linear-gradient(#D8C7FF, #19006C);
+  font-family: 'Poppins', sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
-  display:flex;
-  
-
-  
-}
-/* index.css */
-
-
-body.dark {
-  background-color: #121212;
-  color: white;
+  min-height: 100vh;
 }
 
-.bg-blue-600 {
-  background-color: #1d4ed8;
-}
-
-.bg-gray-900 {
-  background-color: #1a202c;
-}
-
-.text-white {
-  color: white;
-}
-
-.dark .bg-blue-600 {
-  background-color: #2563eb;
-}
-
-.dark .text-white {
-  color: black;
-}
-
-.dark .hover\:underline:hover {
-  text-decoration: none;
-}
+/* Smooth scroll for anchor links */
 html {
   scroll-behavior: smooth;
+}
+.headingStyle {
+  font-size: '2rem';
+  color:aqua;
+  font-weight: bold;
+  
+  
 }
