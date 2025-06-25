@@ -1,31 +1,59 @@
-import React from "react";
+import React from 'react';
 
-function About() {
+function AboutPlatform() {
   const containerStyle = {
-    padding: '20px',
-    backgroundColor: '#f4f4f4',
-    textAlign: 'center',
-    minHeight: 'calc(100vh - 60px)',
+    padding: '40px 20px',
+    backgroundColor: '#f0f4f8',
+    borderRadius: '10px',
+    margin: '20px auto',
+    maxWidth: '800px',
+    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+    fontFamily: 'Arial, sans-serif',
+    color: '#333',
+    lineHeight: '1.6',
   };
 
-  const headingStyle = {
-    fontSize: '2rem',
-    fontWeight: 'bold',
-    color: '#333',
-  };
+ 
 
   const paragraphStyle = {
-    fontSize: '1.1rem',
+    fontSize: '1rem',
+    marginBottom: '12px',
+    textAlign: 'justify',
+  };
+
+  const signatureStyle = {
+    marginTop: '20px',
+    fontStyle: 'italic',
+    fontWeight: '500',
+    textAlign: 'center',
     color: '#555',
-    marginTop: '10px',
   };
 
   return (
     <div style={containerStyle}>
-      <h1 style={headingStyle}>About Us</h1>
-      <p style={paragraphStyle}>We are QuizMaster, a platform where you can test your knowledge with various quizzes on different topics! Currently it is working on the questions uploaded from the admin panel and very soon it will cover more questions.</p>
+      
+      <p style={paragraphStyle}>
+        QuizMaster is your bite-sized gateway to curiosity. From pop culture and tech trivia to
+        history, science, and everything in between, our quizzes give you a fun, five-minute brain
+        workout whenever you want one.
+      </p>
+      <p style={paragraphStyle}>
+        Currently, each quiz pulls questions from an admin-managed database to ensure quality and
+        relevance. But that’s just the beginning. We’re working on exciting new features like:
+      </p>
+      <ul style={{ paddingLeft: '20px', marginBottom: '12px' }}>
+        <li>🧠 Adaptive difficulty that scales with your score</li>
+        <li>🏆 Community challenge modes with leaderboards</li>
+        <li>🔥 Daily streaks and gamified badges</li>
+        <li>🌐 A growing library of expert-curated topics</li>
+      </ul>
+      <p style={paragraphStyle}>
+        Whether you’re studying, competing with friends, or just killing time productively—QuizMaster
+        is your companion for smarter breaks.
+      </p>
+      <div style={signatureStyle}>Built with passion by Dipayan Lodh 💻❤️</div>
     </div>
   );
 }
 
-export default About;
+export default AboutPlatform;

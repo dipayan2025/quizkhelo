@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Quiz from './components/Quiz/Quiz';
 import About from './components/About';
 import Contact from './components/Contact';
+import TopicSelect from './components/TopicSelect';
 import './index.css'
 
 
@@ -29,9 +30,11 @@ function App() {
         <h1 style={headingStyle}>Welcome to QuizMaster!</h1>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/quiz" element={<Quiz />} />
+            <Route path="quiz" element={<Quiz />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            
+
           </Routes>
         </main>
         <Footer />
